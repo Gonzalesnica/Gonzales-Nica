@@ -19,14 +19,54 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(circle at center, rgba(0,0,0,0.8), #000);
+  background: radial-gradient circle at center, rgba(0,0,0,0.😎, #000);
   animation: gradientMove 15s ease infinite;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: #00ffff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    width: 70%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.4s;
+    z-index: 999;
+  }
+
+  nav ul.show {
+    right: 0;
+  }
 }
 
 @keyframes gradientMove {
   0% { background-color: #000; }
-  50% { background-color: #021d1d; }
-  100% { background-color: #000; }
+  50% { background-color: #e20fe2; }
+  100% { background-color: #ec0c74; }
 }
 header {
   width: 100%;
@@ -52,15 +92,15 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: rgb(164, 233, 238);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 900;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+  color: #eb0ba0;
+  text-shadow: 0 0 50px #11e6b8;
 }
 .hero {
   display: grid;
@@ -118,9 +158,9 @@ nav ul li a:hover {
 }
 
 .name-title {
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #2a03b6;
 }
 
 .name-title span {
@@ -131,7 +171,7 @@ nav ul li a:hover {
   font-size: 20px;
   position: relative;
   z-index: 10;
-  background: linear-gradient(90deg, #ec0de1, #ff00ff);
+  background: linear-gradient(90deg, #08f3d4, #ff00ff);
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 10px #00ffff88;
   animation: glowText 3s infinite alternate;
@@ -144,10 +184,10 @@ nav ul li a:hover {
 
 .description {
   margin-top: 15px;
-  font-size: 18px;
-  color: #ccffff;
+  font-size: 25px;
+  color: #ece6e6;
   line-height: 1.6;
-  text-shadow: 0 0 8px #00ffff66;
+  text-shadow: 0 0 8px #ec058466;
 }
 
 footer {

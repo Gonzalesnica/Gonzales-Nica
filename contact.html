@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Maria Nica Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="matrix-background"></div>
+
+  <header>
+  <h1 class="logo">My Portfolio</h1>
+
+  
+  <div class="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html" class="active">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section class="hero">
+    <div class="image-container">
+      <img src="nica.jpg" alt="Maria Nica C. Gonzales">
+    </div>
+    <div class="text-container">
+      <h2 class="name-title">Contact Me</h2>
+      <h3 class="subtitle">Contact Info</h3>
+      <p class="description">
+        <strong>Contact Number:</strong> 09555372262<br>
+        <strong>Email Address:</strong> marianicagonzales0@gmail.com<br>
+        <strong>Facebook Account:</strong> Maria Nica Cabalida Gonzales
+      </p>
+    </div>
+  </section>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  
+    menuToggle.classList.toggle('active');
+  });
+</script>
+
+  <footer>
+    <p>© 2025 My Portfolio | Designed by Maria Nica C. Gonzales</p>
+  </footer>
+
+  <script src="matrix.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('.text-container').classList.add('show');
+    });
+  </script>
+</body>
+</html>
